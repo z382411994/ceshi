@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+</head>
+<body>
+    <h1>Video Player</h1>
+    <video id="myVideo" controls>
+        <source src="https://gitee.com/chen-longleo/tvbox/raw/5bfbe3ca4b2926a88959ef51c69ea4adbb2e0df4/67a97e86c44152a52f0768e94a4fb517.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            let video = document.getElementById('myVideo');
+            video.play().catch(error => {
+                console.error('Error attempting to play', error);
+            });
+        });
+    </script>
+</body>
+</html>
